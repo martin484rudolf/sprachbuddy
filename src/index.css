@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* Volt-Corporate-Design: Purple 502379, Yellow FDC220, Blue 82D0F4, Green 1BBE6F, Schrift Ubuntu.
+   Tokens wie in karte-bw/vorlage.html, hell und dunkel. Kein Logo. */
+:root {
+  color-scheme: light;
+  --ground: #F6F3F9;
+  --paper: #FFFFFF;
+  --ink: #1E1826;
+  --muted: #5C5468;
+  --line: #E3DCEA;
+  --accent: #502379;
+  --accent-ink: #FFFFFF;
+  --focus: #FDC220;
+  --blue: #82D0F4;
+  --green: #1BBE6F;
+  --yellow: #FDC220;
+  --ok: #157A4A;
+  --warn: #9A6B00;
+  --bad: #B3261E;
+  --t0: #DCCFEC; --t1: #CFE8F6; --t2: #FDEDC0; --t3: #CDEEDD; --t4: #C3AEE0;
+  --nb: #E9E4EF; --nbline: #CFC6DA; --land: #F1EEF4;
+  --tipbg: #1E1826; --tipink: #FFFFFF;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --ground: #15111B;
+    --paper: #1F1827;
+    --ink: #F1ECF7;
+    --muted: #B3A9C1;
+    --line: #332A3F;
+    --accent: #C8B2EC;
+    --accent-ink: #1E1826;
+    --ok: #5FD39A;
+    --warn: #F0C35A;
+    --bad: #F08A80;
+    --t0: #3B2E52; --t1: #1F3E52; --t2: #4A3D1E; --t3: #1F4535; --t4: #4B3868;
+    --nb: #231C2C; --nbline: #3A3047; --land: #1A1521;
+    --tipbg: #F1ECF7; --tipink: #1E1826;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ground: #15111B;
+  --paper: #1F1827;
+  --ink: #F1ECF7;
+  --muted: #B3A9C1;
+  --line: #332A3F;
+  --accent: #C8B2EC;
+  --accent-ink: #1E1826;
+  --ok: #5FD39A;
+  --warn: #F0C35A;
+  --bad: #F08A80;
+  --t0: #3B2E52; --t1: #1F3E52; --t2: #4A3D1E; --t3: #1F4535; --t4: #4B3868;
+  --nb: #231C2C; --nbline: #3A3047; --land: #1A1521;
+  --tipbg: #F1ECF7; --tipink: #1E1826;
+}
+
+@theme {
+  --color-ground: var(--ground);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-focus: var(--focus);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-bad: var(--bad);
+  --color-t0: var(--t0);
+  --color-t1: var(--t1);
+  --color-t2: var(--t2);
+  --color-t3: var(--t3);
+  --color-t4: var(--t4);
+  --font-sans: "Ubuntu", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html, body, #root { min-height: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+button { font: inherit; }
+
+/* Karte */
+.karte svg { display: block; width: 100%; height: auto; }
+.karte .land { fill: var(--land); stroke: none; }
+.karte .gm { stroke: var(--paper); stroke-width: 1.4; cursor: pointer; transition: fill .12s; }
+.karte .c0 { fill: var(--t0) } .karte .c1 { fill: var(--t1) } .karte .c2 { fill: var(--t2) } .karte .c3 { fill: var(--t3) } .karte .c4 { fill: var(--t4) }
+.karte .gm:hover, .karte .gm:focus-visible { fill: var(--accent); }
+.karte .gm.aktiv { fill: var(--accent); }
+.karte .nbA { fill: var(--nb); stroke: var(--nbline); stroke-width: 1.4; }
+.karte .rahmen { fill: none; stroke: var(--accent); stroke-width: 4; stroke-linejoin: round; pointer-events: none; }
+.karte .lbl { fill: var(--ink); font-weight: 500; text-anchor: middle; pointer-events: none;
+  paint-order: stroke; stroke: var(--paper); stroke-width: 2.6px; stroke-linejoin: round; }
+.karte .lbl.hot { fill: var(--accent-ink); stroke: none; font-weight: 700; }
+.karte .punkt { fill: var(--green); stroke: var(--paper); stroke-width: 1.5; pointer-events: none; }
+.karte .nbl { fill: var(--accent); font-size: 18px; font-weight: 700; text-anchor: middle; pointer-events: none; opacity: .75;
+  paint-order: stroke; stroke: var(--paper); stroke-width: 3px; stroke-linejoin: round; }
+
+/* RTL-Feinheiten */
+[dir="rtl"] .ltr { direction: ltr; unicode-bidi: isolate; }

@@ -1,0 +1,102 @@
+{
+  "ags": "08118073",
+  "ort": "Vaihingen an der Enz",
+  "sprache": "swg",
+  "variante": "Schwäbisch – Vaihingen an der Enz (Unterland, Nordrand zum Fränkischen)",
+  "modul": "verstehen",
+  "version": "0.1",
+  "stand": "2026-10-15",
+  "quelle": "Entwurf (Sprachmodell) nach Hausschreibung v0.1 – jeder Satz wartet auf ein Ohr aus dem Ort",
+  "hausschreibung": [
+    "Verneinung: net (nicht), nix (nichts), koi/koin/koine (kein).",
+    "Infinitiv und Plural auf -a: macha, komma, essa; wir/ihr/sie auf -et: brauchet, misset, könnet.",
+    "sein: i ben, du bisch, er isch, mir send, se send. haben: i han, du hosch, er hot, mir hen, se hent.",
+    "Höflich: Se (Sie), Ihne (Ihnen). Artikel: dr (der), d' (die), des (das), em (dem), de (den).",
+    "ein/eine: a (a Brezel, a Karte), vor männlichem Akkusativ en (en Termin), vor Vokal an (an Ausweis).",
+    "Lautung: heit, morga, zwoi, oi-, noi, woiß, kloi; vor t/p steht sch: isch, bisch, koschtet, Fescht, Samschdig.",
+    "Tage: Mondig, Dienschdig, Mittwoch, Donnschdig, Freidig, Samschdig, Sonndig.",
+    "Verkleinerung -le: Weckle, bissle. Schriftbild möglichst nah am Hochdeutschen, damit Lernende das Wort wiedererkennen."
+  ],
+  "lagen": [
+    {
+      "id": "baecker",
+      "titel": { "de": "Beim Bäcker", "en": "At the bakery", "ar": "عند المخبز" },
+      "saetze": [
+        { "id": "b01", "swg": "Grüß Gott, was derf's sei?", "de": "Guten Tag, was darf es sein?", "en": "Hello, what can I get you?", "ar": "مرحبًا، ماذا تريد؟", "status": "ungeprüft" },
+        { "id": "b02", "swg": "I hätt gern a Laugaweckle ond zwoi Brezla.", "de": "Ich hätte gern ein Laugenbrötchen und zwei Brezeln.", "en": "I'd like one pretzel roll and two pretzels, please.", "ar": "أريد خبزة لاوغن وبريتزل اثنتين من فضلك.", "status": "ungeprüft" },
+        { "id": "b03", "swg": "Sonsch no ebbes?", "de": "Sonst noch etwas?", "en": "Anything else?", "ar": "هل تريد شيئًا آخر؟", "status": "ungeprüft" },
+        { "id": "b04", "swg": "Noi danke, des wär's.", "de": "Nein danke, das wäre alles.", "en": "No thanks, that's all.", "ar": "لا شكرًا، هذا كل شيء.", "status": "ungeprüft" },
+        { "id": "b05", "swg": "Des macht drei Euro zwanzg.", "de": "Das macht drei Euro zwanzig.", "en": "That's three euros twenty.", "ar": "المجموع ثلاثة يورو وعشرون سنتًا.", "status": "ungeprüft" },
+        { "id": "b06", "swg": "Hent Se no Dinkelbrot?", "de": "Haben Sie noch Dinkelbrot?", "en": "Do you still have spelt bread?", "ar": "هل ما زال لديكم خبز الحنطة؟", "status": "ungeprüft" },
+        { "id": "b07", "swg": "Soll i's Ihne schneida?", "de": "Soll ich es Ihnen schneiden?", "en": "Shall I slice it for you?", "ar": "هل أقطّعه لك؟", "status": "ungeprüft" },
+        { "id": "b08", "swg": "Des Brot isch frisch von heit Morga.", "de": "Das Brot ist frisch von heute Morgen.", "en": "The bread is fresh from this morning.", "ar": "الخبز طازج من صباح اليوم.", "status": "ungeprüft" },
+        { "id": "b09", "swg": "Zum Mitnehma oder zum glei Essa?", "de": "Zum Mitnehmen oder zum sofort Essen?", "en": "To take away or to eat right now?", "ar": "للأخذ معك أم للأكل هنا الآن؟", "status": "ungeprüft" },
+        { "id": "b10", "swg": "Danke, ade – ond en scheena Dag!", "de": "Danke, tschüss – und einen schönen Tag!", "en": "Thanks, bye – and have a nice day!", "ar": "شكرًا، مع السلامة – ويومًا سعيدًا!", "status": "ungeprüft" }
+      ]
+    },
+    {
+      "id": "rathaus",
+      "titel": { "de": "Im Rathaus", "en": "At the town hall", "ar": "في البلدية" },
+      "saetze": [
+        { "id": "r01", "swg": "Hent Se en Termin?", "de": "Haben Sie einen Termin?", "en": "Do you have an appointment?", "status": "ungeprüft" },
+        { "id": "r02", "swg": "Sie misset zerscht a Nummer ziaga.", "de": "Sie müssen zuerst eine Nummer ziehen.", "en": "You have to take a number first.", "status": "ungeprüft" },
+        { "id": "r03", "swg": "Des Bürgerbüro isch im Erdgschoss, glei rechts.", "de": "Das Bürgerbüro ist im Erdgeschoss, gleich rechts.", "en": "The citizens' office is on the ground floor, just to the right.", "status": "ungeprüft" },
+        { "id": "r04", "swg": "Hent Se Ihren Ausweis dabei?", "de": "Haben Sie Ihren Ausweis dabei?", "en": "Do you have your ID with you?", "status": "ungeprüft" },
+        { "id": "r05", "swg": "Des Formular misset Se no onterschreiba.", "de": "Das Formular müssen Sie noch unterschreiben.", "en": "You still have to sign the form.", "status": "ungeprüft" },
+        { "id": "r06", "swg": "Heit isch nix mehr frei, komme Se morga nomal.", "de": "Heute ist nichts mehr frei, kommen Sie morgen noch einmal.", "en": "There's nothing available today, please come again tomorrow.", "status": "ungeprüft" },
+        { "id": "r07", "swg": "Des goht bloß mit Termin.", "de": "Das geht nur mit Termin.", "en": "That's only possible with an appointment.", "status": "ungeprüft" },
+        { "id": "r08", "swg": "Mir brauchet no a Kopie von dem Vertrag.", "de": "Wir brauchen noch eine Kopie von dem Vertrag.", "en": "We still need a copy of the contract.", "status": "ungeprüft" },
+        { "id": "r09", "swg": "Des koschtet acht Euro Gebühr.", "de": "Das kostet acht Euro Gebühr.", "en": "There's an eight-euro fee.", "status": "ungeprüft" },
+        { "id": "r10", "swg": "Wenn Se Fraga hent, frage Se oifach.", "de": "Wenn Sie Fragen haben, fragen Sie einfach.", "en": "If you have questions, just ask.", "status": "ungeprüft" }
+      ]
+    },
+    {
+      "id": "bus",
+      "titel": { "de": "Im Bus", "en": "On the bus", "ar": "في الحافلة" },
+      "saetze": [
+        { "id": "u01", "swg": "Fahrt der Bus zum Bahnhof?", "de": "Fährt der Bus zum Bahnhof?", "en": "Does this bus go to the station?", "status": "ungeprüft" },
+        { "id": "u02", "swg": "Der nächschde kommt in zeah Minuta.", "de": "Der nächste kommt in zehn Minuten.", "en": "The next one comes in ten minutes.", "status": "ungeprüft" },
+        { "id": "u03", "swg": "Hent Se a Fahrkarte oder brauchet Se oine?", "de": "Haben Sie eine Fahrkarte oder brauchen Sie eine?", "en": "Do you have a ticket or do you need one?", "status": "ungeprüft" },
+        { "id": "u04", "swg": "Hinta isch no Platz.", "de": "Hinten ist noch Platz.", "en": "There's still room at the back.", "status": "ungeprüft" },
+        { "id": "u05", "swg": "D'Haltestell isch glei do vorna.", "de": "Die Haltestelle ist gleich da vorne.", "en": "The stop is just up ahead.", "status": "ungeprüft" },
+        { "id": "u06", "swg": "Do misset Se omsteiga.", "de": "Da müssen Sie umsteigen.", "en": "You have to change there.", "status": "ungeprüft" },
+        { "id": "u07", "swg": "Der fahrt heit net, weil Sonndig isch.", "de": "Der fährt heute nicht, weil Sonntag ist.", "en": "It doesn't run today because it's Sunday.", "status": "ungeprüft" },
+        { "id": "u08", "swg": "Beim Fahrer kriagsch au a Karte.", "de": "Beim Fahrer bekommst du auch eine Fahrkarte.", "en": "You can also get a ticket from the driver.", "status": "ungeprüft" },
+        { "id": "u09", "swg": "Des Deutschlandticket gilt au do.", "de": "Das Deutschlandticket gilt auch hier.", "en": "The Deutschlandticket is valid here too.", "status": "ungeprüft" },
+        { "id": "u10", "swg": "Machet Se de Kinderwaga bitte fescht.", "de": "Machen Sie den Kinderwagen bitte fest.", "en": "Please secure the pram.", "status": "ungeprüft" }
+      ]
+    },
+    {
+      "id": "nachbar",
+      "titel": { "de": "Mit dem Nachbarn", "en": "With the neighbour", "ar": "مع الجار" },
+      "saetze": [
+        { "id": "n01", "swg": "Grüß Gott, send Se neu eizoga?", "de": "Guten Tag, sind Sie neu eingezogen?", "en": "Hello, have you just moved in?", "status": "ungeprüft" },
+        { "id": "n02", "swg": "I ben dr Nachbar von nebadra.", "de": "Ich bin der Nachbar von nebenan.", "en": "I'm the neighbour from next door.", "status": "ungeprüft" },
+        { "id": "n03", "swg": "Wenn Se ebbes brauchet, oifach klingla.", "de": "Wenn Sie etwas brauchen, einfach klingeln.", "en": "If you need anything, just ring the bell.", "status": "ungeprüft" },
+        { "id": "n04", "swg": "Dr Müll kommt am Dienschdig naus.", "de": "Der Müll kommt am Dienstag raus.", "en": "The bins go out on Tuesday.", "status": "ungeprüft" },
+        { "id": "n05", "swg": "Die gelb Tonne isch für Plastik.", "de": "Die gelbe Tonne ist für Plastik.", "en": "The yellow bin is for plastic.", "status": "ungeprüft" },
+        { "id": "n06", "swg": "Mir hen am Samschdig Kehrwoche.", "de": "Wir haben am Samstag Kehrwoche.", "en": "It's our turn for the cleaning week on Saturday.", "hinweis": { "de": "Kehrwoche: In vielen Häusern im Südwesten reinigen die Bewohner reihum Treppenhaus und Gehweg. Ein Schild oder Aushang zeigt, wer dran ist.", "en": "Kehrwoche: in many buildings in south-west Germany, residents take turns cleaning the stairwell and pavement. A sign shows whose turn it is." }, "status": "ungeprüft" },
+        { "id": "n07", "swg": "Könnet Se mir kurz helfa? Dr Kaschda isch schwer.", "de": "Können Sie mir kurz helfen? Der Schrank ist schwer.", "en": "Could you help me for a moment? The cupboard is heavy.", "status": "ungeprüft" },
+        { "id": "n08", "swg": "Komme Se doch am Sonndig zum Kaffee.", "de": "Kommen Sie doch am Sonntag zum Kaffee.", "en": "Why don't you come round for coffee on Sunday.", "status": "ungeprüft" },
+        { "id": "n09", "swg": "Hent Se en Schlüssel für de Keller?", "de": "Haben Sie einen Schlüssel für den Keller?", "en": "Do you have a key for the cellar?", "status": "ungeprüft" },
+        { "id": "n10", "swg": "Ade, bis morga!", "de": "Tschüss, bis morgen!", "en": "Bye, see you tomorrow!", "status": "ungeprüft" }
+      ]
+    },
+    {
+      "id": "verein",
+      "titel": { "de": "Im Verein", "en": "At the club", "ar": "في النادي" },
+      "saetze": [
+        { "id": "v01", "swg": "Mir treffet ons jeden Freidig om siebene.", "de": "Wir treffen uns jeden Freitag um sieben.", "en": "We meet every Friday at seven.", "status": "ungeprüft" },
+        { "id": "v02", "swg": "Wilsch mitmacha? Jeder kann komma.", "de": "Willst du mitmachen? Jeder kann kommen.", "en": "Do you want to join? Anyone can come.", "status": "ungeprüft" },
+        { "id": "v03", "swg": "S'Training isch in dr Halle, net draußa.", "de": "Das Training ist in der Halle, nicht draußen.", "en": "Training is in the hall, not outside.", "status": "ungeprüft" },
+        { "id": "v04", "swg": "Dr Beitrag isch zwanzg Euro im Johr.", "de": "Der Beitrag ist zwanzig Euro im Jahr.", "en": "The membership fee is twenty euros a year.", "status": "ungeprüft" },
+        { "id": "v05", "swg": "Bring oifach dei Sportsach mit.", "de": "Bring einfach deine Sportsachen mit.", "en": "Just bring your sports kit.", "status": "ungeprüft" },
+        { "id": "v06", "swg": "Am Wochaend isch Fescht, mir brauchet Helfer.", "de": "Am Wochenende ist Fest, wir brauchen Helfer.", "en": "There's a festival at the weekend, we need helpers.", "status": "ungeprüft" },
+        { "id": "v07", "swg": "D'Feierwehr sucht Leit – au ohne Vorwissa.", "de": "Die Feuerwehr sucht Leute – auch ohne Vorwissen.", "en": "The fire brigade is looking for people – no experience needed.", "status": "ungeprüft" },
+        { "id": "v08", "swg": "Beim Üba lernsch alles, was de brauchsch.", "de": "Beim Üben lernst du alles, was du brauchst.", "en": "You'll learn everything you need while practising.", "status": "ungeprüft" },
+        { "id": "v09", "swg": "Nach em Training goht's ins Vereinsheim.", "de": "Nach dem Training geht es ins Vereinsheim.", "en": "After training we go to the clubhouse.", "status": "ungeprüft" },
+        { "id": "v10", "swg": "Sag Bscheid, wenn de net komma kasch.", "de": "Sag Bescheid, wenn du nicht kommen kannst.", "en": "Let us know if you can't make it.", "status": "ungeprüft" }
+      ]
+    }
+  ]
+}

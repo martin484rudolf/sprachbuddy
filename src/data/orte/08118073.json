@@ -1,0 +1,16 @@
+{
+  "ags": "08118073",
+  "stand": "2026-10-15",
+  "eintraege": [
+    {
+      "id": "buergerbuero",
+      "titel": { "de": "Bürgerbüro der Stadt", "en": "Citizens' office", "ar": "مكتب خدمة المواطنين" },
+      "text": { "de": "Anmeldung, Ausweis, Bescheinigungen. Im Rathaus am Marktplatz.", "en": "Registration, ID, certificates. In the town hall on Marktplatz.", "ar": "التسجيل، بطاقة الهوية، الشهادات. في مبنى البلدية في ساحة السوق." },
+      "adresse": "Marktplatz 1, 71665 Vaihingen an der Enz",
+      "tel": "07042 18-0",
+      "web": "www.vaihingen.de",
+      "status": "ungeprüft",
+      "quelle": "Gemeindedaten Landratsamt Ludwigsburg (Kreiskarte); Zuständigkeit des Bürgerbüros noch nicht vor Ort geprüft"
+    }
+  ]
+}
