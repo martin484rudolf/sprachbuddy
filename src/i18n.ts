@@ -111,6 +111,8 @@ const W: Woerterbuch = {
   'pruef.anmerkung': { de: 'Anmerkung (optional)', en: 'Note (optional)', ar: 'ملاحظة (اختياري)' },
   'pruef.export': { de: 'Prüfung exportieren', en: 'Export review', ar: 'تصدير المراجعة' },
   'pruef.zuruecksetzen': { de: 'Zurücksetzen', en: 'Reset', ar: 'إعادة ضبط' },
+  'pruef.zuruecksetzenFrage': { de: 'Alle Urteile auf diesem Gerät löschen?', en: 'Delete all judgements on this device?', ar: 'حذف جميع الأحكام على هذا الجهاز؟' },
+  'pruef.kopieren': { de: 'Kopieren', en: 'Copy', ar: 'نسخ' },
   'pruef.stand': { de: '{g} in Ordnung · {k} korrigiert · {u} offen', en: '{g} OK · {k} corrected · {u} open', ar: '{g} صحيح · {k} مُصحَّح · {u} مفتوح' },
   'pruef.schwaebisch': { de: 'Schwäbisch', en: 'Swabian', ar: 'الشفابية' },
   'pruef.hochdeutsch': { de: 'Hochdeutsch', en: 'Standard German', ar: 'الألمانية الفصحى' },

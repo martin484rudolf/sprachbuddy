@@ -26,7 +26,7 @@ export default function Kopf({ lang, setLang, ort, geh, zeigeOrt }: Props) {
 
   return (
     <header className="sticky top-0 z-10 bg-ground/90 backdrop-blur border-b border-line">
-      <div className="max-w-xl mx-auto px-4 h-14 flex items-center gap-3">
+      <div className="max-w-xl mx-auto seite h-14 flex items-center gap-3">
         <button
           type="button"
           onClick={() => geh(ort ? '/start' : '/ort')}

@@ -81,7 +81,7 @@ export default function App() {
   return (
     <div className="min-h-dvh flex flex-col">
       <Kopf lang={lang} setLang={setLang} ort={ort} geh={geh} zeigeOrt={!!ort && seite !== 'ort'} />
-      <main className="flex-1 w-full max-w-xl mx-auto px-4 pb-10">{inhalt}</main>
+      <main className="flex-1 w-full max-w-xl mx-auto seite pb-10">{inhalt}</main>
     </div>
   )
 }

@@ -12,6 +12,8 @@ interface Props {
 export default function Pruefansicht({ lang, paket }: Props) {
   const [stand, setStand] = useState<pr.Pruefstand>(() => pr.lade(paket.ags))
   const [offen, setOffen] = useState<string | null>(null)
+  const [resetFrage, setResetFrage] = useState(false)
+  const [kopiert, setKopiert] = useState(false)
   const saetze = useMemo(() => alleSaetze(paket), [paket])
 
   const setze = (id: string, u: pr.Urteil | null) => {
@@ -34,10 +36,24 @@ export default function Pruefansicht({ lang, paket }: Props) {
     { g: 0, k: 0, u: 0 },
   )
 
-  const exportieren = () => {
+  const exportText = () => {
     const { paket: p, protokoll } = pr.exportiere(paket, stand)
+    return JSON.stringify({ paket: p, protokoll }, null, 2)
+  }
+
+  const exportieren = () => {
     const datum = new Date().toISOString().slice(0, 10)
-    pr.ladeDatei(`${datum}_Pruefung_${paket.ags}.json`, JSON.stringify({ paket: p, protokoll }, null, 2))
+    pr.ladeDatei(`${datum}_Pruefung_${paket.ags}.json`, exportText())
+  }
+
+  const kopieren = async () => {
+    try {
+      await navigator.clipboard.writeText(exportText())
+      setKopiert(true)
+      setTimeout(() => setKopiert(false), 2000)
+    } catch {
+      /* Zwischenablage verweigert – dann bleibt der Download */
+    }
   }
 
   return (
@@ -50,6 +66,9 @@ export default function Pruefansicht({ lang, paket }: Props) {
         <span className="text-muted">{t(lang, 'pruef.stand', zahlen)}</span>
         <button type="button" onClick={exportieren} className="ms-auto rounded-full bg-accent text-accent-ink px-4 py-1.5 font-medium">
           {t(lang, 'pruef.export')}
+        </button>
+        <button type="button" onClick={kopieren} className="rounded-full border border-line px-3 py-1.5" title={t(lang, 'pruef.kopieren')}>
+          {kopiert ? '✓' : t(lang, 'pruef.kopieren')}
         </button>
       </div>
 
@@ -72,19 +91,30 @@ export default function Pruefansicht({ lang, paket }: Props) {
         </div>
       ))}
 
-      <div className="mt-8 text-sm">
-        <button
-          type="button"
-          onClick={() => {
-            if (confirm(t(lang, 'pruef.zuruecksetzen') + '?')) {
-              setStand({})
-              pr.speichere(paket.ags, {})
-            }
-          }}
-          className="text-muted underline underline-offset-4"
-        >
-          {t(lang, 'pruef.zuruecksetzen')}
-        </button>
+      <div className="mt-8 text-sm flex items-center gap-3">
+        {resetFrage ? (
+          <>
+            <span className="text-muted">{t(lang, 'pruef.zuruecksetzenFrage')}</span>
+            <button
+              type="button"
+              onClick={() => {
+                setStand({})
+                pr.speichere(paket.ags, {})
+                setResetFrage(false)
+              }}
+              className="rounded-full border border-bad text-bad px-3 py-1"
+            >
+              {t(lang, 'pruef.zuruecksetzen')}
+            </button>
+            <button type="button" onClick={() => setResetFrage(false)} className="text-muted underline underline-offset-4">
+              {t(lang, 'pruef.abbrechen')}
+            </button>
+          </>
+        ) : (
+          <button type="button" onClick={() => setResetFrage(true)} className="text-muted underline underline-offset-4">
+            {t(lang, 'pruef.zuruecksetzen')}
+          </button>
+        )}
       </div>
     </section>
   )
