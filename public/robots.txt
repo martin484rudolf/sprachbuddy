@@ -1,2 +1,3 @@
+# Bewusst kein Disallow: Suchmaschinen muessen die Seite lesen duerfen, um das noindex (Header und Meta) zu sehen.
 User-agent: *
-Disallow: /
+Disallow:
