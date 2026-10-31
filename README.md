@@ -59,6 +59,10 @@ notieren, ob „Deutsch“ beim Ton dabei ist (`beispiele`: `titel`, `deutscherT
 Datum in `stand`, Status auf `geprüft`. Keine Kontodaten, keine Bildschirmfotos
 mit Profilnamen.
 
+Rundenweise am Handy mit Claude Code: Skill `.claude/skills/stichprobe-streaming/`
+(„Stichprobe“ oder „du bist mein Gast“ sagen; eine Frage je Nachricht, Claude
+schreibt mit, meldet sich nirgends an).
+
 ## Entwickeln
 
 ```
