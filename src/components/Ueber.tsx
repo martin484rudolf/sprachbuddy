@@ -1,4 +1,4 @@
-import { KARTE, PAKETE, type Sprache } from '../data'
+import { KARTE, MEDIEN, PAKETE, type Sprache } from '../data'
 import { t } from '../i18n'
 
 interface Props {
@@ -42,6 +42,9 @@ export default function Ueber({ lang }: Props) {
           <li>
             Nachschlagewerke für die Schwäbisch-Pakete: Hermann Fischer, Schwäbisches Wörterbuch (1904–1936, Internet Archive);
             Sprachatlas von Nord Baden-Württemberg, Universität Tübingen (2019, frei zugänglich).
+          </li>
+          <li>
+            Filme und Serien: {MEDIEN.quelle} {t(lang, 'allg.stand')} {MEDIEN.stand}.
           </li>
           <li>Schrift Ubuntu (Ubuntu Font Licence). Vorlesen und Spracherkennung: Stimmen des Geräts, keine Server.</li>
         </ul>

@@ -1,0 +1,246 @@
+{
+  "stand": "2026-10-31",
+  "quelle": "Hilfeseiten der Anbieter und Presseberichte, Stand je Eintrag. Preise und Sprachfassungen ändern sich; jeder Eintrag trägt seinen Stand und seinen Prüfstatus.",
+  "anbieter": [
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "web": "netflix.com",
+      "kostenlos": false,
+      "kosten": {
+        "text": {
+          "de": "Ab 6,99 € im Monat mit Werbung; 15,99 € ohne Werbung; 21,99 € Premium.",
+          "en": "From €6.99 a month with ads; €15.99 without ads; €21.99 Premium."
+        },
+        "stand": "2026-09",
+        "quelle": "Presseberichte zur Preiserhöhung im September 2026",
+        "status": "ungeprüft"
+      },
+      "lernen": {
+        "de": "Fast alles mit deutschem Ton und deutschen Untertiteln. Ton und Untertitel lassen sich getrennt wählen.",
+        "en": "Almost everything has German audio and German subtitles. Audio and subtitles can be chosen separately."
+      },
+      "suche": {
+        "text": {
+          "de": "Eigene Seiten zum Stöbern nach Sprache: nach Untertiteln oder nach Ton (Originalsprache oder Synchronisation).",
+          "en": "Dedicated pages to browse by language: by subtitles or by audio (original language or dubbing)."
+        },
+        "web": "netflix.com/browse/subtitles"
+      },
+      "umschalten": {
+        "de": "Im Player auf das Sprechblasen-Symbol tippen, dann Ton und Untertitel wählen. Der Player zeigt nur einen Teil der Sprachen; mehr erscheinen, wenn die Anzeigesprache des Profils umgestellt ist.",
+        "en": "In the player tap the speech-bubble icon, then choose audio and subtitles. The player shows only some languages; more appear once the profile's display language is changed."
+      },
+      "herkunftssprachen": {
+        "hinweis": {
+          "de": "Untertitel in der Herkunftssprache zusammen mit deutschem Ton. Stichprobe: Seite „Nach Untertiteln stöbern“, Sprache wählen, drei Titel öffnen und prüfen, ob „Deutsch“ beim Ton dabei ist.",
+          "en": "Subtitles in the home language together with German audio. Spot check: open the browse-by-subtitles page, pick the language, open three titles and check whether German is among the audio tracks."
+        },
+        "sprachen": [
+          { "code": "ar", "name": { "de": "Arabisch", "en": "Arabic", "ar": "العربية" }, "umfang": "unbekannt", "beispiele": [], "status": "ungeprüft", "stand": null },
+          { "code": "uk", "name": { "de": "Ukrainisch", "en": "Ukrainian" }, "umfang": "unbekannt", "beispiele": [], "status": "ungeprüft", "stand": null },
+          { "code": "tr", "name": { "de": "Türkisch", "en": "Turkish" }, "umfang": "unbekannt", "beispiele": [], "status": "ungeprüft", "stand": null },
+          { "code": "fa", "name": { "de": "Persisch", "en": "Persian" }, "umfang": "unbekannt", "beispiele": [], "status": "ungeprüft", "stand": null },
+          { "code": "ru", "name": { "de": "Russisch", "en": "Russian" }, "umfang": "unbekannt", "beispiele": [], "status": "ungeprüft", "stand": null },
+          { "code": "en", "name": { "de": "Englisch", "en": "English" }, "umfang": "unbekannt", "beispiele": [], "status": "ungeprüft", "stand": null }
+        ]
+      },
+      "status": "ungeprüft",
+      "quelle": "Netflix-Hilfe „Untertitel, Untertitel für Hörgeschädigte oder Audiosprache“; Seiten netflix.com/browse/subtitles und netflix.com/browse/audio"
+    },
+    {
+      "id": "prime-video",
+      "name": "Prime Video",
+      "web": "primevideo.com",
+      "kostenlos": false,
+      "kosten": {
+        "text": {
+          "de": "In Amazon Prime enthalten: 8,99 € im Monat oder 89,90 € im Jahr. Ohne Werbung 2,99 € mehr im Monat.",
+          "en": "Included in Amazon Prime: €8.99 a month or €89.90 a year. Without ads €2.99 more a month."
+        },
+        "stand": "2026-06",
+        "quelle": "Verbraucherportale, Stand Juni 2026",
+        "status": "ungeprüft"
+      },
+      "lernen": {
+        "de": "Deutscher Ton fast immer, deutsche Untertitel nicht bei jedem Titel. Welche Sprachen ein Titel hat, steht auf seiner Detailseite. Vor dem Leihen oder Kaufen dort nachsehen.",
+        "en": "German audio almost always, German subtitles not on every title. A title's detail page lists its languages. Check there before renting or buying."
+      },
+      "suche": {
+        "text": {
+          "de": "Kein Filter nach Sprache. Behelf: Im Suchfeld „dt ov“ eingeben; Titel mit mehreren Tonspuren tragen das Kürzel „(dt./OV)“.",
+          "en": "No language filter. Workaround: type “dt ov” into the search box; titles with several audio tracks carry the tag “(dt./OV)”."
+        },
+        "web": null
+      },
+      "umschalten": {
+        "de": "Während der Wiedergabe auf „Audio und Untertitel“ (Sprechblase) tippen; am Fernseher Pfeil nach oben drücken.",
+        "en": "During playback tap “Audio and subtitles” (speech bubble); on a TV press the up arrow."
+      },
+      "status": "ungeprüft",
+      "quelle": "Amazon-Hilfe „Alternative Tonspuren wählen“; Ratgeber Giga und kino.de (teils älter)"
+    },
+    {
+      "id": "disney-plus",
+      "name": "Disney+",
+      "web": "disneyplus.com",
+      "kostenlos": false,
+      "kosten": {
+        "text": {
+          "de": "6,99 € im Monat mit Werbung; 10,99 € Standard; 15,99 € Premium.",
+          "en": "€6.99 a month with ads; €10.99 Standard; €15.99 Premium."
+        },
+        "stand": "2025-10",
+        "quelle": "Presseberichte zur Preiserhöhung im Herbst 2025",
+        "status": "ungeprüft"
+      },
+      "lernen": {
+        "de": "Eigene Produktionen fast immer mit deutschem Ton und deutschen Untertiteln. Weltweit seit Juli 2026 Ton in 58 und Untertitel in 42 Sprachen; welche davon in Deutschland je Titel freigeschaltet sind, ist nicht veröffentlicht.",
+        "en": "Own productions almost always with German audio and German subtitles. Worldwide since July 2026 audio in 58 and subtitles in 42 languages; which of them are enabled per title in Germany is not published."
+      },
+      "suche": {
+        "text": {
+          "de": "Kein Filter nach Sprache bekannt.",
+          "en": "No language filter known."
+        },
+        "web": null
+      },
+      "umschalten": {
+        "de": "Im Player oben rechts auf das Sprechblasen-Symbol tippen, Ton und Untertitel wählen.",
+        "en": "In the player tap the speech-bubble icon at the top right, choose audio and subtitles."
+      },
+      "status": "ungeprüft",
+      "quelle": "Disney-Pressemitteilung zur Spracherweiterung (Juli 2026); Ratgeber schieb.de"
+    },
+    {
+      "id": "arte",
+      "name": "ARTE",
+      "web": "arte.tv",
+      "kostenlos": true,
+      "kosten": {
+        "text": { "de": "Kostenlos, ohne Konto.", "en": "Free, no account." },
+        "stand": "2026-10",
+        "quelle": "arte.tv",
+        "status": "ungeprüft"
+      },
+      "lernen": {
+        "de": "Dokus, Filme und Konzerte auf Deutsch und Französisch, viele auch auf Englisch, Spanisch, Italienisch und Polnisch. Nicht jeder Beitrag in jeder Sprache.",
+        "en": "Documentaries, films and concerts in German and French, many also in English, Spanish, Italian and Polish. Not every programme in every language."
+      },
+      "suche": {
+        "text": {
+          "de": "Oben auf der Seite die Sprache wählen; dann zeigt die Mediathek nur Beiträge in dieser Sprache.",
+          "en": "Pick the language at the top of the page; the library then shows only programmes in that language."
+        },
+        "web": "arte.tv/de"
+      },
+      "umschalten": {
+        "de": "Im Player auf das Einstellungs-Symbol tippen, Sprachversion und Untertitel wählen.",
+        "en": "In the player tap the settings icon, choose language version and subtitles."
+      },
+      "status": "ungeprüft",
+      "quelle": "ARTE-App im App Store; Europäisches Fremdsprachenzentrum (ECML) zu ARTE in sechs Sprachen"
+    },
+    {
+      "id": "ard-mediathek",
+      "name": "ARD Mediathek",
+      "web": "ardmediathek.de",
+      "kostenlos": true,
+      "kosten": {
+        "text": { "de": "Kostenlos, ohne Konto.", "en": "Free, no account." },
+        "stand": "2026-10",
+        "quelle": "ardmediathek.de",
+        "status": "ungeprüft"
+      },
+      "lernen": {
+        "de": "Deutsch. Viele Sendungen mit deutschen Untertiteln, einige mit Hörbeschreibung oder Gebärdensprache. Tagesschau und Nachrichten in einfacher Sprache gibt es dort auch.",
+        "en": "German. Many programmes with German subtitles, some with audio description or sign language. News in simple German is available there too."
+      },
+      "suche": {
+        "text": {
+          "de": "Rubrik „Barrierefrei“ oder in der Suche nach „Untertitel“ filtern.",
+          "en": "Section “Barrierefrei” (accessible) or filter the search by subtitles."
+        },
+        "web": "ardmediathek.de"
+      },
+      "umschalten": {
+        "de": "Im Player auf „UT“ tippen.",
+        "en": "In the player tap “UT”."
+      },
+      "status": "ungeprüft",
+      "quelle": "ARD-Mitteilung zum Ausbau barrierefreier Angebote 2026 bis 2028"
+    },
+    {
+      "id": "zdf-mediathek",
+      "name": "ZDFmediathek",
+      "web": "zdf.de",
+      "kostenlos": true,
+      "kosten": {
+        "text": { "de": "Kostenlos, ohne Konto.", "en": "Free, no account." },
+        "stand": "2026-10",
+        "quelle": "zdf.de",
+        "status": "ungeprüft"
+      },
+      "lernen": {
+        "de": "Deutsch. Viele Sendungen mit deutschen Untertiteln; ab 2027 sollen alle neuen Inhalte Untertitel haben. Logo-Kindernachrichten sind gut für den Einstieg.",
+        "en": "German. Many programmes with German subtitles; from 2027 all new content is to have subtitles. The children's news programme is a good starting point."
+      },
+      "suche": {
+        "text": {
+          "de": "Seite „Barrierefreiheit im ZDF“ sammelt Sendungen mit Untertiteln, Hörbeschreibung und Gebärdensprache.",
+          "en": "The page “Barrierefreiheit im ZDF” collects programmes with subtitles, audio description and sign language."
+        },
+        "web": "zdf.de/barrierefreiheit-im-zdf"
+      },
+      "umschalten": {
+        "de": "Im Player auf „UT“ tippen oder in den Einstellungen Untertitel dauerhaft einschalten.",
+        "en": "In the player tap “UT” or switch subtitles on permanently in the settings."
+      },
+      "status": "ungeprüft",
+      "quelle": "ZDF „Fragen und Antworten zur Barrierefreiheit“; Roadmap „Access 2028“"
+    },
+    {
+      "id": "dw-deutsch-lernen",
+      "name": "Deutsche Welle – Deutsch lernen",
+      "web": "learngerman.dw.com",
+      "kostenlos": true,
+      "kosten": {
+        "text": { "de": "Kostenlos, Konto nur für den Lernstand nötig.", "en": "Free, an account is only needed to save progress." },
+        "stand": "2026-10",
+        "quelle": "learngerman.dw.com",
+        "status": "ungeprüft"
+      },
+      "lernen": {
+        "de": "Videokurs „Nicos Weg“ von A1 bis B1 mit Untertiteln, dazu langsam gesprochene Nachrichten. Gemacht für Menschen, die Deutsch lernen.",
+        "en": "Video course “Nicos Weg” from A1 to B1 with subtitles, plus slowly spoken news. Made for people learning German."
+      },
+      "suche": {
+        "text": {
+          "de": "Nach Niveau sortiert, keine Suche nötig.",
+          "en": "Sorted by level, no search needed."
+        },
+        "web": "learngerman.dw.com"
+      },
+      "umschalten": {
+        "de": "Untertitel im Player; die Erklärungen gibt es in vielen Sprachen, darunter Arabisch, Ukrainisch, Türkisch und Persisch.",
+        "en": "Subtitles in the player; explanations are available in many languages, including Arabic, Ukrainian, Turkish and Persian."
+      },
+      "status": "ungeprüft",
+      "quelle": "learngerman.dw.com"
+    }
+  ],
+  "werkzeuge": [
+    {
+      "id": "language-reactor",
+      "name": "Language Reactor",
+      "web": "languagereactor.com",
+      "kostenlos": true,
+      "text": {
+        "de": "Browser-Erweiterung für Netflix und YouTube: zwei Untertitelzeilen zugleich, zum Beispiel Deutsch und Arabisch, Wort antippen für die Übersetzung. Grundfunktionen kostenlos. Nur am Computer im Browser Chrome.",
+        "en": "Browser extension for Netflix and YouTube: two subtitle lines at once, for example German and Arabic, tap a word for its translation. Basic features free. Desktop Chrome only."
+      },
+      "status": "ungeprüft",
+      "quelle": "languagereactor.com"
+    }
+  ]
+}

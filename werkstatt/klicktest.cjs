@@ -80,6 +80,16 @@ async function main() {
   await page.screenshot({ path: path.join(OUT, '07-zustaendig.png'), fullPage: true })
   await page.goBack()
 
+  // Filme und Serien
+  await page.getByRole('button', { name: /Filme und Serien/ }).click()
+  await page.waitForTimeout(300)
+  await page.screenshot({ path: path.join(OUT, '07b-medien.png'), fullPage: true })
+  const anbieter = await page.locator('h3').count()
+  if (anbieter < 7) fehler.push('Filme und Serien: nur ' + anbieter + ' Karten')
+  if (!(await page.getByText('noch nicht geprüft').count())) fehler.push('Filme und Serien: Herkunftssprachen fehlen')
+  await page.goBack()
+  await page.waitForTimeout(200)
+
   // Prüfansicht + Export
   await page.getByRole('button', { name: /^Prüfen/ }).click()
   await page.waitForTimeout(300)

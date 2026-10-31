@@ -9,6 +9,7 @@ import Lektion from './components/Lektion'
 import Zustaendig from './components/Zustaendig'
 import Pruefansicht from './components/Pruefansicht'
 import Ueber from './components/Ueber'
+import Medien from './components/Medien'
 
 function ladeOrt(): string | null {
   try {
@@ -72,6 +73,8 @@ export default function App() {
     inhalt = <Zustaendig lang={lang} ags={ort} />
   } else if (seite === 'pruefen' && paket) {
     inhalt = <Pruefansicht lang={lang} paket={paket} />
+  } else if (seite === 'medien') {
+    inhalt = <Medien lang={lang} />
   } else if (seite === 'ueber') {
     inhalt = <Ueber lang={lang} />
   } else {

@@ -88,6 +88,7 @@ export default function Start({ lang, ags, paket, geh }: Props) {
       )}
 
       <Kachel titel={t(lang, 'modul.zustaendig')} sub={t(lang, 'modul.zustaendigSub')} onClick={() => geh('/zustaendig')} farbe="bg-t1" />
+      <Kachel titel={t(lang, 'modul.medien')} sub={t(lang, 'modul.medienSub')} onClick={() => geh('/medien')} farbe="bg-t3" />
       {paket && <Kachel titel={t(lang, 'modul.pruefen')} sub={t(lang, 'modul.pruefenSub')} onClick={() => geh('/pruefen')} farbe="bg-t2" />}
 
       <div className="flex gap-4 text-sm text-muted pt-2">

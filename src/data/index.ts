@@ -1,6 +1,7 @@
 import karte from './karte/ludwigsburg.json'
 import vaihingen from './pakete/08118073.json'
 import orteVaihingen from './orte/08118073.json'
+import medien from './medien.json'
 
 export type Sprache = 'de' | 'en' | 'ar'
 export type Status = 'ungeprüft' | 'geprüft' | 'korrigiert'
@@ -52,6 +53,55 @@ export interface OrtsDaten {
   eintraege: Eintrag[]
 }
 
+export interface Kosten {
+  text: Partial<Record<Sprache, string>>
+  stand: string
+  quelle: string
+  status: Status
+}
+
+export type Umfang = 'unbekannt' | 'viele' | 'einige' | 'wenige' | 'keine'
+
+export interface Herkunftssprache {
+  code: string
+  name: Partial<Record<Sprache, string>>
+  umfang: Umfang
+  beispiele: { titel: string; deutscherTon: boolean }[]
+  status: Status
+  stand: string | null
+}
+
+export interface Anbieter {
+  id: string
+  name: string
+  web: string
+  kostenlos: boolean
+  kosten: Kosten
+  lernen: Partial<Record<Sprache, string>>
+  suche: { text: Partial<Record<Sprache, string>>; web: string | null }
+  umschalten: Partial<Record<Sprache, string>>
+  herkunftssprachen?: { hinweis: Partial<Record<Sprache, string>>; sprachen: Herkunftssprache[] }
+  status: Status
+  quelle: string
+}
+
+export interface Werkzeug {
+  id: string
+  name: string
+  web: string
+  kostenlos: boolean
+  text: Partial<Record<Sprache, string>>
+  status: Status
+  quelle: string
+}
+
+export interface Medien {
+  stand: string
+  quelle: string
+  anbieter: Anbieter[]
+  werkzeuge: Werkzeug[]
+}
+
 export interface Gemeinde {
   ags: string
   name: string
@@ -87,6 +137,9 @@ export interface Karte {
 }
 
 export const KARTE = karte as Karte
+
+/** Filme und Serien: Anbieter, Kosten, Sprachumschaltung. Gilt für alle Orte; Preise mit Stand je Eintrag. */
+export const MEDIEN = medien as Medien
 
 /** Alle Pakete, Schlüssel = amtlicher Gemeindeschlüssel (AGS). Neue Orte: Datei anlegen, hier eintragen. */
 export const PAKETE: Record<string, Paket> = {

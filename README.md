@@ -16,10 +16,12 @@ der App.
   amtliche Gemeindeschlüssel (Vaihingen an der Enz: `08118073`)
 - `src/data/orte/<AGS>.json` – Zuständigkeiten des Ortes, gepflegt von der
   Ortsgruppe
+- `src/data/medien.json` – Filme und Serien: Anbieter, Kosten mit Stand, Weg
+  zur Sprachumschaltung, Untertitel in Herkunftssprachen; gilt für alle Orte
 - `src/data/index.ts` – Register: welche Pakete und Orte es gibt
 - `src/lib/` – Vorlesen (Stimme des Geräts), Wiederholung in Abständen
   (Leitner-Boxen im Browser), Übungsgenerator, Prüfung mit Export
-- `src/components/` – Ortswahl, Start, Lektion, Zuständig, Prüfansicht, Über
+- `src/components/` – Ortswahl, Start, Lektion, Zuständig, Filme und Serien, Prüfansicht, Über
 - `werkstatt/` – Klick-Test mit Playwright (wird nicht ausgeliefert)
 
 Stack: React 19, Vite, TypeScript, Tailwind 4, vite-plugin-pwa. Farben und
@@ -43,6 +45,19 @@ eintragen. Die Hausschreibung steht im Paket selbst – damit Schreibweisen
 innerhalb eines Ortes einheitlich bleiben. Orte außerhalb des Landkreises
 brauchen zusätzlich eine Karte; der Ortswähler ist dafür vorbereitet
 (gleicher Schlüssel, andere Geometrie).
+
+## Die Übersicht „Filme und Serien“ pflegen
+
+`src/data/medien.json`. Jeder Anbieter trägt Kosten mit `stand` (Jahr-Monat) und
+Quelle, Texte zum Lernen, Suchen und Umschalten, und einen `status`. Alles beginnt
+als `ungeprüft`; `geprüft` setzt, wer es im eigenen Konto nachgesehen hat.
+
+Stichprobe zu Untertiteln in Herkunftssprachen (Netflix, `herkunftssprachen`):
+Seite `netflix.com/browse/subtitles`, Sprache wählen, grob schätzen (`umfang`:
+`wenige` unter 20, `einige` bis 100, `viele` darüber), drei Titel öffnen und
+notieren, ob „Deutsch“ beim Ton dabei ist (`beispiele`: `titel`, `deutscherTon`).
+Datum in `stand`, Status auf `geprüft`. Keine Kontodaten, keine Bildschirmfotos
+mit Profilnamen.
 
 ## Entwickeln
 
