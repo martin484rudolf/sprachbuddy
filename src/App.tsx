@@ -31,10 +31,29 @@ function ladeSprache(): Sprache {
   return SPRACHEN.some((x) => x.code === nav) ? nav : 'de'
 }
 
+function ladeZiel(): Sprache {
+  try {
+    const s = localStorage.getItem('sb:ziel') as Sprache | null
+    if (s && SPRACHEN.some((x) => x.code === s)) return s
+  } catch {
+    /* ignore */
+  }
+  return 'de'
+}
+
 export default function App() {
   const [hash, geh] = useHash()
   const [ort, setOrt] = useState<string | null>(ladeOrt)
   const [lang, setLang] = useState<Sprache>(ladeSprache)
+  const [ziel, setZiel] = useState<Sprache>(ladeZiel)
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('sb:ziel', ziel)
+    } catch {
+      /* ignore */
+    }
+  }, [ziel])
 
   useEffect(() => {
     document.documentElement.lang = lang
@@ -74,16 +93,16 @@ export default function App() {
   } else if (seite === 'pruefen' && paket) {
     inhalt = <Pruefansicht lang={lang} paket={paket} />
   } else if (seite === 'medien') {
-    inhalt = <Medien lang={lang} />
+    inhalt = <Medien lang={lang} ziel={ziel} />
   } else if (seite === 'ueber') {
     inhalt = <Ueber lang={lang} />
   } else {
-    inhalt = <Start lang={lang} ags={ort} paket={paket} geh={geh} />
+    inhalt = <Start lang={lang} ziel={ziel} ags={ort} paket={paket} geh={geh} />
   }
 
   return (
     <div className="min-h-dvh flex flex-col">
-      <Kopf lang={lang} setLang={setLang} ort={ort} geh={geh} zeigeOrt={!!ort && seite !== 'ort'} />
+      <Kopf lang={lang} setLang={setLang} ziel={ziel} setZiel={setZiel} ort={ort} geh={geh} zeigeOrt={!!ort && seite !== 'ort'} />
       <main className="flex-1 w-full max-w-xl mx-auto seite pb-10">{inhalt}</main>
     </div>
   )

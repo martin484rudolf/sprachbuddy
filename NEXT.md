@@ -10,7 +10,7 @@ warte_was: Stichprobe Netflix (Runde 1 Arabisch gestellt) und Merge des Branches
 warte_seit: 2026-10-31
 nachhaken_nach: null
 deadline: null
-letzte_aenderung: 2026-10-31
+letzte_aenderung: 2026-11-04
 meta: "GitHub martin484rudolf/sprachbuddy · Vercel, Push auf main deployt · noindex · React 19, Vite, Tailwind 4 · Inhalte nur unter src/data"
 tags: [volt, sprache, pwa, vaihingen, integration]
 ---
@@ -50,6 +50,9 @@ Stand: 2026-10-31. Wird am Ende jeder Sitzung fortgeschrieben.
 
 ## Erledigt
 
+- 2026-11-04: Sprachmenü mit „Ich spreche“ und „Ich lerne“ (zwei Auswahlfelder, Tauschen).
+  Übungen gibt es weiter nur für Deutsch; bei anderer Zielsprache Hinweis auf Start und
+  unter „Filme und Serien“. Klick-Test prüft Tauschen.
 - 2026-10-31: Ansicht „Filme und Serien“, `medien.json`, Skill
   `stichprobe-streaming`, README-Abschnitt zur Pflege.
 - 2026-10-15: Gerüst, Ortswähler, Pilotpaket Vaihingen, Prüfansicht mit Export,

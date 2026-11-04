@@ -1,8 +1,9 @@
 import { MEDIEN, type Anbieter, type Sprache, type Status, type Werkzeug } from '../data'
-import { t } from '../i18n'
+import { sprachName, t } from '../i18n'
 
 interface Props {
   lang: Sprache
+  ziel: Sprache
 }
 
 function StatusChip({ status, stand, lang }: { status: Status; stand?: string | null; lang: Sprache }) {
@@ -62,10 +63,11 @@ function AnbieterKarte({ a, lang }: { a: Anbieter; lang: Sprache }) {
           <p className="text-xs text-muted">{tx(a.herkunftssprachen.hinweis)}</p>
           <ul className="mt-2 divide-y divide-line">
             {a.herkunftssprachen.sprachen.map((h) => (
-              <li key={h.code} className="py-1.5 text-sm flex flex-wrap items-baseline gap-x-2">
+              <li key={h.code} className={`py-1.5 text-sm flex flex-wrap items-baseline gap-x-2 ${h.code === lang ? 'bg-t0 -mx-2 px-2 rounded-lg' : ''}`}>
                 <span className="font-medium" lang={h.code}>
                   {tx(h.name)}
                 </span>
+                {h.code === lang && <span className="text-xs text-accent">{t(lang, 'medien.deineSprache')}</span>}
                 <span className="text-muted">{t(lang, `medien.umfang.${h.umfang}`)}</span>
                 <StatusChip status={h.status} stand={h.stand} lang={lang} />
                 {h.beispiele.length > 0 && (
@@ -105,7 +107,7 @@ function WerkzeugKarte({ w, lang }: { w: Werkzeug; lang: Sprache }) {
   )
 }
 
-export default function Medien({ lang }: Props) {
+export default function Medien({ lang, ziel }: Props) {
   const kostenlos = MEDIEN.anbieter.filter((a) => a.kostenlos)
   const abo = MEDIEN.anbieter.filter((a) => !a.kostenlos)
 
@@ -114,6 +116,11 @@ export default function Medien({ lang }: Props) {
       <div>
         <h1 className="text-2xl font-bold">{t(lang, 'medien.titel')}</h1>
         <p className="mt-2 text-sm">{t(lang, 'medien.einleitung')}</p>
+        {ziel !== 'de' && (
+          <p className="mt-3 rounded-2xl bg-t0 border border-line p-4 text-sm" data-test="medien-ziel">
+            {t(lang, 'medien.andereZiel', { ziel: sprachName(ziel), ich: sprachName(lang) })}
+          </p>
+        )}
       </div>
 
       <div className="space-y-3">

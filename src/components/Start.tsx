@@ -1,10 +1,11 @@
 import { useMemo } from 'react'
 import { gemeinde, type Paket, type Sprache } from '../data'
-import { t } from '../i18n'
+import { sprachName, t } from '../i18n'
 import * as srs from '../lib/srs'
 
 interface Props {
   lang: Sprache
+  ziel: Sprache
   ags: string
   paket?: Paket
   geh: (p: string) => void
@@ -23,7 +24,7 @@ function Kachel({ titel, sub, onClick, farbe }: { titel: string; sub: string; on
   )
 }
 
-export default function Start({ lang, ags, paket, geh }: Props) {
+export default function Start({ lang, ziel, ags, paket, geh }: Props) {
   const g = gemeinde(ags)
   const stand = useMemo(() => srs.lade(ags), [ags])
   const nf = new Intl.NumberFormat(lang === 'ar' ? 'ar-EG' : lang === 'en' ? 'en-GB' : 'de-DE')
@@ -37,6 +38,12 @@ export default function Start({ lang, ags, paket, geh }: Props) {
           {t(lang, 'ort.kreis')}
         </p>
       </div>
+
+      {ziel !== 'de' && (
+        <p className="rounded-2xl bg-t0 border border-line p-4 text-sm" data-test="ziel-hinweis">
+          {t(lang, 'ziel.nurDeutsch', { ziel: sprachName(ziel) })}
+        </p>
+      )}
 
       {paket ? (
         <div className="rounded-2xl bg-paper border border-line p-4">

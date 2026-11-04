@@ -192,6 +192,27 @@ const W: Woerterbuch = {
     ar: 'هل تتكلم لهجة مدينتك؟ افتح المراجعة، راجع الجمل، وأرسل الملف. هل تتكلم العربية أو الأوكرانية أو التركية أو الرومانية؟ راجع الترجمات إذن. كل جملة مُراجَعة تجعل التطبيق أكثر صدقًا.',
   },
 
+  'sprachen.titel': { de: 'Sprachen', en: 'Languages', ar: 'اللغات' },
+  'sprachen.ich': { de: 'Ich spreche', en: 'I speak', ar: 'أتكلم' },
+  'sprachen.ziel': { de: 'Ich lerne', en: 'I am learning', ar: 'أتعلّم' },
+  'sprachen.tauschen': { de: 'Tauschen', en: 'Swap', ar: 'تبديل' },
+  'sprachen.fertig': { de: 'Fertig', en: 'Done', ar: 'تم' },
+  'sprachen.hinweis': {
+    de: 'Die Oberfläche folgt „Ich spreche“. Übungen und Tipps richten sich nach „Ich lerne“.',
+    en: 'The interface follows “I speak”. Exercises and tips follow “I am learning”.',
+    ar: 'الواجهة تتبع „أتكلم“. التمارين والنصائح تتبع „أتعلّم“.',
+  },
+  'ziel.nurDeutsch': {
+    de: 'Übungen gibt es bisher nur zum Deutschlernen. Für {ziel} findest du unter „Filme und Serien“, wie du mit deinem Abo üben kannst.',
+    en: 'So far there are exercises only for learning German. For {ziel}, “Films and series” shows how to practise with your subscription.',
+    ar: 'حتى الآن توجد تمارين لتعلّم الألمانية فقط. لـ{ziel} تجد في „أفلام ومسلسلات“ كيف تتدرّب باشتراكك.',
+  },
+  'medien.andereZiel': {
+    de: 'Du lernst {ziel}. Stell bei Filmen und Serien den Ton auf {ziel} und die Untertitel auf {ich}, später beides auf {ziel}. Bei Netflix findest du Titel mit {ziel}-Ton unter netflix.com/browse/audio. Die Angaben unten beziehen sich auf Deutsch.',
+    en: 'You are learning {ziel}. Set the audio of films and series to {ziel} and the subtitles to {ich}, later both to {ziel}. On Netflix you find titles with {ziel} audio at netflix.com/browse/audio. The details below refer to German.',
+    ar: 'أنت تتعلّم {ziel}. اضبط صوت الأفلام والمسلسلات على {ziel} والترجمة على {ich}، ولاحقًا كليهما على {ziel}. في Netflix تجد عناوين بصوت {ziel} على netflix.com/browse/audio. المعلومات أدناه تخص الألمانية.',
+  },
+  'medien.deineSprache': { de: 'deine Sprache', en: 'your language', ar: 'لغتك' },
   'allg.sprache': { de: 'Sprache', en: 'Language', ar: 'اللغة' },
   'allg.ungeprueft': { de: 'Übersetzung ungeprüft', en: 'translation unverified', ar: 'الترجمة غير مُراجَعة' },
   'allg.menue': { de: 'Menü', en: 'Menu', ar: 'القائمة' },
@@ -202,8 +223,12 @@ const W: Woerterbuch = {
 export function t(lang: Sprache, key: string, vars?: Record<string, string | number>): string {
   const e = W[key]
   let s = e ? e[lang] ?? e.de : key
-  if (vars) for (const k of Object.keys(vars)) s = s.replace(`{${k}}`, String(vars[k]))
+  if (vars) for (const k of Object.keys(vars)) s = s.split(`{${k}}`).join(String(vars[k]))
   return s
+}
+
+export function sprachName(code: Sprache): string {
+  return SPRACHEN.find((s) => s.code === code)?.name ?? code
 }
 
 export function dirFuer(lang: Sprache): 'ltr' | 'rtl' {

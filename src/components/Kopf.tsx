@@ -5,12 +5,49 @@ import { SPRACHEN, t } from '../i18n'
 interface Props {
   lang: Sprache
   setLang: (l: Sprache) => void
+  ziel: Sprache
+  setZiel: (l: Sprache) => void
   ort: string | null
   geh: (p: string) => void
   zeigeOrt: boolean
 }
 
-export default function Kopf({ lang, setLang, ort, geh, zeigeOrt }: Props) {
+function Auswahl({
+  id,
+  label,
+  wert,
+  onWahl,
+  lang,
+}: {
+  id: string
+  label: string
+  wert: Sprache
+  onWahl: (l: Sprache) => void
+  lang: Sprache
+}) {
+  return (
+    <div>
+      <label htmlFor={id} className="block text-xs font-medium text-muted mb-1">
+        {label}
+      </label>
+      <select
+        id={id}
+        value={wert}
+        onChange={(e) => onWahl(e.target.value as Sprache)}
+        className="w-full rounded-lg border border-line bg-ground px-3 py-2 text-sm"
+      >
+        {SPRACHEN.map((s) => (
+          <option key={s.code} value={s.code}>
+            {s.name}
+            {!s.geprueft ? ` (${t(lang, 'allg.ungeprueft')})` : ''}
+          </option>
+        ))}
+      </select>
+    </div>
+  )
+}
+
+export default function Kopf({ lang, setLang, ziel, setZiel, ort, geh, zeigeOrt }: Props) {
   const [offen, setOffen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const g = ort ? gemeinde(ort) : undefined
@@ -23,6 +60,12 @@ export default function Kopf({ lang, setLang, ort, geh, zeigeOrt }: Props) {
     document.addEventListener('click', h)
     return () => document.removeEventListener('click', h)
   }, [offen])
+
+  const tausche = () => {
+    const ich = lang
+    setLang(ziel)
+    setZiel(ich)
+  }
 
   return (
     <header className="sticky top-0 z-10 bg-ground/90 backdrop-blur border-b border-line">
@@ -49,38 +92,40 @@ export default function Kopf({ lang, setLang, ort, geh, zeigeOrt }: Props) {
           <button
             type="button"
             onClick={() => setOffen((o) => !o)}
-            className="text-sm px-3 py-1.5 rounded-full border border-line bg-paper hover:border-accent"
-            aria-haspopup="menu"
+            className="text-sm px-3 py-1.5 rounded-full border border-line bg-paper hover:border-accent whitespace-nowrap"
+            aria-haspopup="dialog"
             aria-expanded={offen}
-            aria-label={t(lang, 'allg.sprache')}
+            aria-label={t(lang, 'sprachen.titel')}
           >
-            {SPRACHEN.find((s) => s.code === lang)?.name}
+            <span dir="ltr">
+              {lang.toUpperCase()} → {ziel.toUpperCase()}
+            </span>
           </button>
           {offen && (
-            <ul role="menu" className="absolute end-0 mt-2 w-56 rounded-xl bg-paper border border-line shadow-lg overflow-hidden">
-              {SPRACHEN.map((s) => (
-                <li key={s.code} role="none">
-                  <button
-                    type="button"
-                    role="menuitemradio"
-                    aria-checked={s.code === lang}
-                    dir={s.dir}
-                    onClick={() => {
-                      setLang(s.code)
-                      setOffen(false)
-                    }}
-                    className={`w-full text-start px-4 py-2.5 flex items-center gap-2 hover:bg-ground ${s.code === lang ? 'font-bold text-accent' : ''}`}
-                  >
-                    <span>{s.name}</span>
-                    {!s.geprueft && (
-                      <span className="ms-auto text-xs text-warn" dir={s.dir}>
-                        {t(s.code, 'allg.ungeprueft')}
-                      </span>
-                    )}
-                  </button>
-                </li>
-              ))}
-            </ul>
+            <div
+              role="dialog"
+              aria-label={t(lang, 'sprachen.titel')}
+              className="absolute end-0 mt-2 w-72 rounded-xl bg-paper border border-line shadow-lg p-4 space-y-3"
+            >
+              <div className="font-bold">{t(lang, 'sprachen.titel')}</div>
+              <Auswahl id="sprache-ich" label={t(lang, 'sprachen.ich')} wert={lang} onWahl={setLang} lang={lang} />
+              <button
+                type="button"
+                onClick={tausche}
+                className="w-full rounded-lg border border-line py-1.5 text-sm hover:border-accent"
+              >
+                ⇅ {t(lang, 'sprachen.tauschen')}
+              </button>
+              <Auswahl id="sprache-ziel" label={t(lang, 'sprachen.ziel')} wert={ziel} onWahl={setZiel} lang={lang} />
+              <p className="text-xs text-muted">{t(lang, 'sprachen.hinweis')}</p>
+              <button
+                type="button"
+                onClick={() => setOffen(false)}
+                className="w-full rounded-lg bg-accent text-accent-ink py-2 text-sm font-medium"
+              >
+                {t(lang, 'sprachen.fertig')}
+              </button>
+            </div>
           )}
         </div>
       </div>
